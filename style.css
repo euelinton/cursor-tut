@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  cursor: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  min-height: 10vh;
+  margin: auto;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav-links, 
+h1 {
+  flex: 1;
+}
+
+.nav-links li {
+  padding: 1rem;
+}
+
+.front-cover img {
+  width: 500px;
+  position: relative;
+  z-index: -3;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .front-desc {
+  margin: 200px;
+}
+
+section .front-desc h2 {
+  font-size: 72px;
+  line-height: 100px;
+}
+
+/* CURSOR */
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  z-index: -1;
+}
+
+/* SCALE EFFECT */
+
+.link-grow {
+  transform: scale(2);
+  background-color: black;
+}
+
+.hovered-link {
+  color: white;
+}
+
+/* BLUR AND GRAYSCALE EFFECT */
+
+.grayscale {
+  backdrop-filter: grayscale();  
+  transform: scale(1.5);
+}
+
+.blur {
+  backdrop-filter: blur(3px);  
+  transform: scale(1.5);
+}
